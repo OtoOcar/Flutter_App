@@ -11,7 +11,7 @@ class FlutterAppDrawer extends StatelessWidget {
           DrawerHeader(
             decoration: BoxDecoration(color: Colors.blue),
             child: Text(
-              'Flutter App Drawer',
+              'Panel de Navegación',
               style: TextStyle(color: Colors.white, fontSize: 24),
             ),
           ),
@@ -24,27 +24,27 @@ class FlutterAppDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.cake),
-            title: Text('Age'),
+            leading: Icon(Icons.calculate),
+            title: const Text('Calculadora'),
             onTap: () {
               Navigator.of(context).pop();
-              context.go('/age');
+              context.go('/calculadora');
             },
           ),
           ListTile(
-            leading: Icon(Icons.fitness_center),
-            title: Text('BMI'),
+            leading: Icon(Icons.percent),
+            title: const Text('Ponderada'),
             onTap: () {
               Navigator.of(context).pop();
-              context.go('/bmi');
+              context.go('/ponderada');
             },
           ),
           ListTile(
-            leading: Icon(Icons.fitness_center),
-            title: Text('Zodiac'),
+            leading: Icon(Icons.contact_phone),
+            title: const Text('Agenda'),
             onTap: () {
               Navigator.of(context).pop();
-              context.go('/zodiac');
+              context.go('/agenda');
             },
           ),
         ],
