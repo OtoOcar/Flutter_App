@@ -12,18 +12,17 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       routerConfig: FlutterAppRouter.router,
+      // Configuaración del tema global de la aplicación
       theme: ThemeData(
         primarySwatch: Colors.blue,
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.blue,
+            backgroundColor: const Color.fromARGB(255, 9, 64, 109),
             foregroundColor: Colors.white,
             textStyle: const TextStyle(fontSize: 22),
           ),
         ),
       ),
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Exercises',
     );
   }
 }

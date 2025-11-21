@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/src/feature/widgets/flutter_app_drawer.dart';
+import 'package:go_router/go_router.dart';
 
 class CalculadoraScreen extends StatefulWidget {
   @override
@@ -54,8 +55,19 @@ class _CalculadoraScreenState extends State<CalculadoraScreen> {
     return Scaffold(
       drawer: FlutterAppDrawer(),
 
-      appBar: AppBar(title: const Text("Calculadora Básica")),
-
+      appBar: AppBar(
+        title: const Text("Calculadora Básica"),
+        // Icono para volver al inicio
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.home),
+            tooltip: 'Volver al inicio',
+            onPressed: () {
+              context.go('/');
+            },
+          ),
+        ],
+      ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
 

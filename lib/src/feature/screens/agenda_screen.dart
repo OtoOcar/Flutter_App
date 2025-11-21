@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/src/feature/widgets/flutter_app_drawer.dart';
+import 'package:go_router/go_router.dart';
 
 class AgendaScreen extends StatefulWidget {
   @override
@@ -41,8 +42,19 @@ class _AgendaScreenState extends State<AgendaScreen> {
     return Scaffold(
       drawer: FlutterAppDrawer(),
 
-      appBar: AppBar(title: const Text("Agenda Simple")),
-
+      appBar: AppBar(
+        title: const Text("Agenda Simple"),
+        // Icono para volver al inicio
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.home),
+            tooltip: 'Volver al inicio',
+            onPressed: () {
+              context.go('/');
+            },
+          ),
+        ],
+      ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(
